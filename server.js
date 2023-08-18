@@ -37,11 +37,6 @@ const sickGroceryList = [
     {
         itemName: "soap",
         amount: 2,
-        nextItem: "bleach",
-    },
-    {
-        itemName: "bleach",
-        amount: 2,
         nextItem: "tissues",
     },
     {
@@ -52,7 +47,7 @@ const sickGroceryList = [
     {
         itemName: "chocolate",
         amount: 3,
-        nextItem: "grocery_list",
+        nextItem: "",
     },
 ];
 
@@ -63,7 +58,6 @@ const statement = (item) => {
             break;
         case "honey":
         case "water":
-        case "bleach":
             return "bottles of";
             break;
         case "garlic":
@@ -89,7 +83,7 @@ app.listen(port, (req, res) => {
 });
 
 // ROUTES
-app.get("/grocery_list", (req, res) => {
+app.get("/", (req, res) => {
     res.send(`<h1>My Grocery List Request When I'm Sick...</h1><br/><a href="/lemons">Check first item</a>`);
 });
 
