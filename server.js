@@ -90,7 +90,7 @@ app.listen(port, (req, res) => {
 
 // ROUTES
 app.get("/grocery_list", (req, res) => {
-    res.send(`<h1>My Grocery List Request When I'm Sick...</h1><br/><a href="/lemons">Check next item</a>`);
+    res.send(`<h1>My Grocery List Request When I'm Sick...</h1><br/><a href="/lemons">Check first item</a>`);
 });
 
 app.get("/:item", (req, res) => {
